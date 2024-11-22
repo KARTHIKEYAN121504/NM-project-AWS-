@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AWS-hosted Virtual Classroom and Learning Platform</title>
+<link rel="stylesheet" href="..\static\login.css">
+<link rel="stylesheet" href="..\static\home.html">
+ <link rel="icon" href="logo.png">
+<script>
+ function validation()
+    {
+      const email="alice@gmail.com";
+      const p="1234";
+      let mail=document.getElementById("mail").value;
+      let word=document.getElementById("pass").value;
+      let name=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+      ;
+      let pass=/^[a-zA-Z0-9@#_&-*"+]{6,}$/;
+        if(!mail.match(name) && !word.match(pass))
+        {
+         alert("Enter valid E-mail or password");
+         return false;
+        }
+        if(email==mail && p==word)
+        {
+         alert("login successfull");
+        }
+        else
+        {
+          alert("Invalid E-mail or password");
+          return false;
+        }
+    }
+ </script>
+</head>
+<body>
+    <form action="../templates/enroll.html" method="get" onsubmit="return validation()">
+        <div class="form">
+            <br>
+            <h2><b>Login page   </b></h2>
+            <br>
+            <div class="mail">
+                <label>E-mail id</label>
+                <input type="text" id="mail" class="mail" placeholder="Enter valid E-mail" required>
+            </div>
+            <br><br>
+            <div class="pass">
+                <label>password</label>
+                <input type="password" id="pass" class="pass" placeholder="Enter password" required>
+            </div>
+            <br><br>
+            <button class="sub" type="submit" >submit</button><br>
+            <p>Don't have an account?<a href="register.html" style="color:rgb(165, 249, 126)"> Create an account</a></p>
+            <br>
+        </div>
+</body>
+</html>
+

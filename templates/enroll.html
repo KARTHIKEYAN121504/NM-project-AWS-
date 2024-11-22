@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Progress | Virtual Classroom</title>
+    <link rel="stylesheet" href="../static/enroll.css" />
+     <link rel="icon" href="logo.png">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Virtual Classroom</div>
+      <nav>
+        <ul>
+          <li><a href="../templates/course.html">Course</a></li>
+          <li><a href="../templates/contact us.html">Contact</a></li>
+          <li><a href="../templates/Profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="enroll-page">
+      <section class="video-container">
+        <h1>AWS Cloud Practitioner</h1>
+        <h2>Current Module</h2>
+        <div class="youtube-video">
+          <div id="player"></div>
+        </div>
+      </section>
+
+      <section class="progress-container">
+        <h2>Course Progress</h2>
+        <div class="progress-bar">
+          <div id="progress-bar" class="progress" style="width: 0%"></div>
+        </div>
+        <p id="completion-status" class="completion-status">0% Complete</p>
+      </section>
+
+      <section id="completion-section" class="completion" style="display: none">
+        <h2>Congratulations!</h2>
+        <p>You have successfully completed the course!</p>
+        <a href="certificate.pdf" class="btn" download>Download Certificate</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Virtual Classroom. All rights reserved.</p>
+    </footer>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../static/script.js"></script>
+  </body>
+</html>
